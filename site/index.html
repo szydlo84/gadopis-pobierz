@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Gadopis: dyktowanie po polsku dla Windows</title>
+    <meta
+      name="description"
+      content="Darmowa aplikacja do dyktowania po polsku dla Windows 10 i 11. Naciskasz F8, mówisz, a tekst pojawia się tam, gdzie jest kursor. Działa na Twoim komputerze, bez chmury i bez konta."
+    />
+    <meta
+      name="theme-color"
+      content="#f5ead8"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#201e1d"
+      media="(prefers-color-scheme: dark)"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pl_PL" />
+    <meta property="og:title" content="Gadopis. Mów. Gadopis zapisze." />
+    <meta
+      property="og:description"
+      content="Darmowe dyktowanie po polsku dla Windows 10 i 11. Działa na Twoim komputerze, bez chmury i bez konta."
+    />
+    <meta property="og:url" content="https://gadopis.pl/" />
+    <meta
+      property="og:image"
+      content="https://gadopis.pl/assets/img/gadopis-podglad.png"
+    />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="640" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://gadopis.pl/" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="icon"
+      href="assets/img/favicon-32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+    <link
+      rel="preload"
+      href="assets/fonts/Figtree-Variable.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#tresc">Przejdź do treści</a>
+    <div class="blobs" aria-hidden="true">
+      <span class="blob blob-peach"></span>
+      <span class="blob blob-sage"></span>
+    </div>
+
+    <header class="top">
+      <a class="brand" href="#" aria-label="Gadopis, strona główna">
+        <svg class="logo" viewBox="0 0 285 69" aria-hidden="true">
+          <g transform="translate(0 4.07)">
+            <path
+              class="logo-circle"
+              d="M0 32A32 32 0 1 0 64 32A32 32 0 1 0 0 32Z"
+            />
+            <path
+              class="logo-bars"
+              d="M14 20.25H14A2.75 2.75 0 0 1 16.75 23V41A2.75 2.75 0 0 1 14 43.75H14A2.75 2.75 0 0 1 11.25 41V23A2.75 2.75 0 0 1 14 20.25ZM22 13.25H22A2.75 2.75 0 0 1 24.75 16V48A2.75 2.75 0 0 1 22 50.75H22A2.75 2.75 0 0 1 19.25 48V16A2.75 2.75 0 0 1 22 13.25ZM30 22.25H30A2.75 2.75 0 0 1 32.75 25V39A2.75 2.75 0 0 1 30 41.75H30A2.75 2.75 0 0 1 27.25 39V25A2.75 2.75 0 0 1 30 22.25ZM38 29.25H50A2.75 2.75 0 0 1 52.75 32V32A2.75 2.75 0 0 1 50 34.75H38A2.75 2.75 0 0 1 35.25 32V32A2.75 2.75 0 0 1 38 29.25Z"
+            />
+            <path
+              class="logo-word"
+              d="M112.85 47.61L112.85 47.61Q112.85 49.80 111.48 51.29Q110.11 52.78 107.93 53.70Q105.76 54.62 103.27 55.10Q100.78 55.57 98.47 55.74Q96.16 55.92 94.61 55.92L94.61 55.92Q93.55 55.92 91.93 55.85Q90.31 55.78 88.54 55.52Q86.77 55.26 85.23 54.69Q83.69 54.12 82.71 53.12Q81.74 52.12 81.74 50.59L81.74 50.59Q81.74 48.69 83.21 47.62Q84.69 46.55 86.77 46.03L86.77 46.03Q85.83 45.66 85.19 44.96Q84.56 44.26 84.56 43.07L84.56 43.07Q84.56 41.49 85.57 40.54Q86.59 39.59 88.16 39.11Q89.73 38.62 91.36 38.41L91.36 38.41Q89.02 37.85 86.97 36.72Q84.93 35.59 83.68 33.69Q82.42 31.79 82.42 28.99L82.42 28.99Q82.42 25.99 83.60 23.89Q84.77 21.80 86.75 20.49Q88.73 19.19 91.19 18.54Q93.66 17.89 96.24 17.81L96.24 17.81Q97.06 15.65 98.20 13.49Q99.35 11.33 101.13 9.88Q102.91 8.43 105.55 8.43L105.55 8.43Q107.71 8.43 109.12 9.69Q110.53 10.96 110.53 13.17L110.53 13.17Q110.53 14.97 109.65 16.43Q108.76 17.89 106.73 17.89L106.73 17.89Q105.31 17.89 104.55 17.17Q103.78 16.44 103.23 15.71Q102.67 14.97 101.91 14.97L101.91 14.97Q101.09 14.97 100.51 15.98Q99.93 17.00 99.59 17.92L99.59 17.92Q102.41 18.26 104.94 19.44Q107.47 20.61 109.07 22.75Q110.66 24.88 110.66 28.12L110.66 28.12Q110.66 31.00 109.49 33.07Q108.32 35.14 106.35 36.46Q104.39 37.77 101.95 38.39Q99.51 39.01 96.98 39.01L96.98 39.01Q96.16 39.01 95.37 38.96L95.37 38.96Q95.05 39.28 95.05 39.59L95.05 39.59Q95.05 40.12 95.83 40.35Q96.61 40.57 97.69 40.62Q98.77 40.67 99.73 40.65Q100.70 40.62 101.07 40.62L101.07 40.62Q102.96 40.62 105.02 40.79Q107.08 40.96 108.86 41.62Q110.64 42.28 111.74 43.69Q112.85 45.10 112.85 47.61ZM95.79 21.85L95.79 21.85Q95.03 21.85 94.71 22.48Q94.39 23.11 94.33 23.93Q94.26 24.75 94.26 25.28L94.26 25.28Q94.26 25.99 94.35 27.56Q94.45 29.13 94.74 30.84Q95.03 32.55 95.62 33.75Q96.21 34.95 97.24 34.95L97.24 34.95Q98.06 34.95 98.40 34.36Q98.75 33.77 98.81 32.98Q98.88 32.18 98.88 31.60L98.88 31.60Q98.88 30.84 98.80 29.24Q98.72 27.65 98.44 25.95Q98.17 24.25 97.53 23.05Q96.90 21.85 95.79 21.85ZM91.20 48.48L91.20 48.48Q91.20 49.30 92.01 49.77Q92.81 50.25 93.96 50.48Q95.11 50.72 96.16 50.79Q97.22 50.85 97.72 50.85L97.72 50.85Q98.30 50.85 99.47 50.68Q100.64 50.51 101.65 50.06Q102.65 49.61 102.65 48.77L102.65 48.77Q102.65 47.58 101.66 47.11Q100.67 46.63 99.43 46.55Q98.19 46.48 97.37 46.48L97.37 46.48Q96.16 46.48 94.95 46.53Q93.74 46.58 92.52 46.61L92.52 46.61Q91.97 47.00 91.59 47.48Q91.20 47.95 91.20 48.48ZM112.01 39.44L112.01 39.44Q112.01 37.01 113.14 35.39Q114.28 33.77 116.11 32.78Q117.94 31.79 120.08 31.37Q122.21 30.95 124.19 30.95L124.19 30.95Q124.77 30.95 125.38 30.96Q125.98 30.97 126.56 31.08L126.56 31.08L126.56 24.22Q126.56 23.56 126.29 22.69Q126.01 21.82 125.17 21.82L125.17 21.82Q124.35 21.82 124.15 22.49Q123.95 23.17 123.95 23.77L123.95 23.77Q123.95 24.04 123.97 24.31Q123.98 24.59 123.98 24.88L123.98 24.88Q123.98 27.60 122.11 28.69Q120.24 29.79 117.84 29.79L117.84 29.79Q115.83 29.79 114.36 28.89Q112.88 27.99 112.88 25.72L112.88 25.72Q112.88 24.83 113.23 23.98Q113.59 23.14 114.14 22.48L114.14 22.48Q115.75 20.53 118.19 19.50Q120.63 18.47 123.33 18.09Q126.04 17.71 128.41 17.71L128.41 17.71Q131.10 17.71 133.34 18.47Q135.58 19.24 136.93 21.02Q138.27 22.80 138.27 25.80L138.27 25.80L138.27 37.96Q138.27 38.41 138.48 38.75Q138.69 39.09 139.19 39.09L139.19 39.09Q139.59 39.09 139.87 38.84Q140.14 38.59 140.54 38.59L140.54 38.59Q141.30 38.59 141.69 39.12Q142.07 39.65 142.07 40.36L142.07 40.36Q142.07 42.20 140.95 43.54Q139.83 44.87 138.17 45.57Q136.50 46.26 134.82 46.26L134.82 46.26Q132.84 46.26 130.82 45.39Q128.80 44.52 128.04 42.68L128.04 42.68Q126.70 44.55 124.36 45.41Q122.03 46.26 119.79 46.26L119.79 46.26Q117.73 46.26 115.95 45.49Q114.17 44.71 113.09 43.18Q112.01 41.65 112.01 39.44ZM123.90 37.12L123.90 37.12Q123.90 38.17 124.40 39.11Q124.90 40.04 126.12 40.04L126.12 40.04Q126.35 40.04 126.56 39.99L126.56 39.99L126.56 34.53Q126.12 34.35 125.64 34.35L125.64 34.35Q124.64 34.35 124.27 35.34Q123.90 36.32 123.90 37.12ZM141.99 32.87L141.99 32.87Q141.99 28.86 143.55 25.40Q145.10 21.93 148.08 19.79Q151.06 17.66 155.36 17.66L155.36 17.66Q157.94 17.66 160.08 18.76L160.08 18.76L160.08 16.52Q160.08 15.36 159.69 14.78Q159.31 14.20 158.82 13.85Q158.34 13.49 157.95 13.06Q157.57 12.62 157.57 11.75L157.57 11.75Q157.57 10.67 158.22 10.10Q158.86 9.54 159.76 9.19L159.76 9.19L165.48 6.90Q166.48 6.48 167.54 6.16Q168.59 5.84 169.70 5.84L169.70 5.84Q170.78 5.84 171.35 6.60Q171.92 7.35 171.92 8.35L171.92 8.35L171.92 37.75Q171.92 39.04 172.10 39.54Q172.29 40.04 173.18 40.99L173.18 40.99Q173.71 41.54 173.92 41.93Q174.13 42.31 174.13 43.10L174.13 43.10Q174.13 44.23 173.39 44.87Q172.65 45.50 171.55 45.50L171.55 45.50L165.64 45.50Q164.16 45.50 162.81 44.59Q161.45 43.68 160.89 42.28L160.89 42.28Q159.29 44.02 157.24 45.14Q155.20 46.26 152.67 46.26L152.67 46.26Q149.98 46.26 147.96 45.09Q145.94 43.92 144.63 41.95Q143.31 39.99 142.65 37.62Q141.99 35.24 141.99 32.87ZM154.22 31.55L154.22 31.55Q154.22 32.50 154.37 33.83Q154.51 35.16 154.92 36.44Q155.33 37.72 156.14 38.58Q156.94 39.44 158.23 39.44L158.23 39.44Q159.23 39.44 160.08 38.75L160.08 38.75L160.08 24.67Q159.63 24.22 159.08 23.94Q158.52 23.67 157.86 23.67L157.86 23.67Q156.65 23.67 155.92 24.55Q155.20 25.43 154.83 26.74Q154.46 28.04 154.34 29.36Q154.22 30.68 154.22 31.55ZM191.03 17.66L191.03 17.66Q195.38 17.66 198.67 19.45Q201.95 21.24 203.80 24.49Q205.64 27.73 205.64 32.11L205.64 32.11Q205.64 36.40 203.61 39.58Q201.58 42.76 198.17 44.51Q194.75 46.26 190.59 46.26L190.59 46.26Q186.21 46.26 182.91 44.46Q179.62 42.65 177.78 39.37Q175.95 36.09 175.95 31.71L175.95 31.71Q175.95 27.44 178.01 24.27Q180.06 21.11 183.49 19.38Q186.92 17.66 191.03 17.66ZM192.54 40.44L192.54 40.44Q193.20 40.44 193.47 39.75Q193.75 39.07 193.83 38.24Q193.91 37.41 193.91 36.96L193.91 36.96Q193.91 35.45 193.67 33.96Q193.43 32.47 193.06 31.02L193.06 31.02Q192.93 30.44 192.56 29.22Q192.19 27.99 191.67 26.65Q191.14 25.30 190.51 24.35Q189.87 23.40 189.16 23.40L189.16 23.40Q188.55 23.40 188.28 24.09Q188.00 24.78 187.92 25.61Q187.84 26.44 187.84 26.86L187.84 26.86Q187.84 27.57 188.05 29.14Q188.26 30.71 188.67 32.63Q189.08 34.56 189.66 36.34Q190.24 38.12 190.97 39.28Q191.69 40.44 192.54 40.44ZM219.04 17.66L219.04 17.66Q220.57 17.66 220.95 18.75Q221.33 19.84 221.33 21.06L221.33 21.06Q221.33 21.22 221.33 21.35L221.33 21.35Q222.94 19.71 224.97 18.68Q227.00 17.66 229.50 17.66L229.50 17.66Q232.25 17.66 234.30 18.82Q236.36 19.98 237.72 21.90Q239.08 23.83 239.76 26.21Q240.45 28.60 240.45 31.05L240.45 31.05Q240.45 35.11 238.84 38.58Q237.23 42.05 234.18 44.16Q231.14 46.26 226.81 46.26L226.81 46.26Q224.07 46.26 221.86 45.13L221.86 45.13L221.86 47.98Q221.86 48.90 221.91 49.39Q221.96 49.88 222.23 50.29Q222.49 50.69 223.12 51.38L223.12 51.38Q223.62 51.91 223.86 52.33Q224.10 52.75 224.10 53.52L224.10 53.52Q224.10 54.65 223.36 55.28Q222.62 55.92 221.51 55.92L221.51 55.92L210.28 55.92Q209.15 55.92 208.41 55.31Q207.67 54.70 207.67 53.52L207.67 53.52Q207.67 52.57 208.03 52.09Q208.38 51.62 208.83 51.25Q209.28 50.88 209.64 50.27Q209.99 49.67 209.99 48.48L209.99 48.48L209.99 28.36Q209.99 27.15 209.60 26.56Q209.20 25.96 208.67 25.63Q208.15 25.30 207.75 24.88Q207.36 24.46 207.36 23.56L207.36 23.56Q207.36 22.56 208.05 21.95Q208.75 21.35 209.57 21.00L209.57 21.00L214.79 18.71Q215.79 18.26 216.86 17.96Q217.93 17.66 219.04 17.66ZM223.97 24.51L223.97 24.51Q222.83 24.51 221.86 25.28L221.86 25.28L221.86 39.20Q222.36 39.67 222.97 39.96Q223.57 40.25 224.31 40.25L224.31 40.25Q225.60 40.25 226.38 39.40Q227.16 38.54 227.57 37.25Q227.97 35.96 228.11 34.64Q228.24 33.32 228.24 32.37L228.24 32.37Q228.24 31.34 228.08 30.01Q227.92 28.68 227.47 27.43Q227.03 26.17 226.18 25.34Q225.34 24.51 223.97 24.51ZM254.37 17.66L254.37 17.66Q255.45 17.66 256.04 18.39Q256.64 19.13 256.64 20.16L256.64 20.16L256.64 37.56Q256.64 38.30 256.70 39.05Q256.77 39.80 257.30 40.36L257.30 40.36Q257.98 41.10 258.44 41.52Q258.90 41.94 258.90 43.10L258.90 43.10Q258.90 44.26 258.18 44.88Q257.45 45.50 256.32 45.50L256.32 45.50L245.11 45.50Q243.98 45.50 243.26 44.89Q242.53 44.29 242.53 43.10L242.53 43.10Q242.53 41.97 242.98 41.51Q243.43 41.04 244.14 40.36L244.14 40.36Q244.67 39.83 244.73 39.04Q244.80 38.25 244.80 37.56L244.80 37.56L244.80 28.36Q244.80 27.83 244.72 27.27Q244.64 26.70 244.27 26.30L244.27 26.30Q244.17 26.17 244.02 26.09Q243.88 26.01 243.77 25.91L243.77 25.91Q243.19 25.30 242.70 24.92Q242.21 24.54 242.21 23.56L242.21 23.56Q242.21 22.51 242.87 21.93Q243.53 21.35 244.43 21.00L244.43 21.00L250.12 18.71Q251.13 18.32 252.21 17.99Q253.29 17.66 254.37 17.66ZM250.41 17.55L250.41 17.55Q248.73 17.55 247.01 17.05Q245.30 16.55 244.15 15.38Q243.01 14.20 243.01 12.20L243.01 12.20Q243.01 10.19 244.17 9.05Q245.33 7.90 247.04 7.43Q248.75 6.95 250.41 6.95L250.41 6.95Q252.08 6.95 253.80 7.43Q255.53 7.90 256.70 9.05Q257.88 10.19 257.88 12.20L257.88 12.20Q257.88 14.23 256.72 15.40Q255.56 16.58 253.83 17.06Q252.10 17.55 250.41 17.55ZM272.43 22.17L272.43 22.17Q271.54 22.17 270.82 22.56Q270.11 22.96 270.11 23.98L270.11 23.98Q270.11 24.83 270.51 25.28Q270.90 25.72 271.64 26.04L271.64 26.04Q272.43 26.38 273.30 26.54Q274.17 26.70 274.99 26.88L274.99 26.88Q277.42 27.41 279.52 28.66Q281.63 29.92 282.94 31.88Q284.24 33.85 284.24 36.54L284.24 36.54Q284.24 40.15 282.61 42.28Q280.98 44.42 278.27 45.34Q275.57 46.26 272.35 46.26L272.35 46.26Q271.54 46.26 270.10 46.05Q268.66 45.84 267.98 45.47L267.98 45.47L267.95 45.47Q267.69 45.34 267.08 45.18Q266.47 45.03 266.18 45.03L266.18 45.03Q265.37 45.03 264.79 45.67Q264.21 46.32 263.36 46.32L263.36 46.32Q262.23 46.32 261.58 45.58Q260.94 44.84 260.61 43.83Q260.28 42.81 260.01 41.94L260.01 41.94Q259.83 41.20 259.59 40.48Q259.35 39.75 259.35 38.99L259.35 38.99Q259.35 37.62 260.09 36.77Q260.83 35.93 262.23 35.93L262.23 35.93Q263.60 35.93 264.50 36.52Q265.39 37.12 266.09 37.99Q266.79 38.86 267.51 39.74Q268.24 40.62 269.27 41.22Q270.30 41.81 271.85 41.81L271.85 41.81Q272.93 41.81 273.49 41.16Q274.04 40.52 274.04 39.49L274.04 39.49Q274.04 38.01 273.25 37.59Q272.46 37.17 271.22 36.93L271.22 36.93Q268.95 36.48 266.91 35.88Q264.86 35.27 263.30 34.21Q261.73 33.16 260.82 31.42Q259.91 29.68 259.91 26.94L259.91 26.94Q259.91 23.69 261.67 21.65Q263.44 19.61 266.17 18.63Q268.90 17.66 271.72 17.66L271.72 17.66Q272.80 17.66 273.84 17.74Q274.88 17.81 275.91 18.16L275.91 18.16Q276.04 18.18 276.53 18.37Q277.02 18.55 277.49 18.72Q277.97 18.90 277.97 18.90L277.97 18.90Q278.84 18.90 279.46 18.28Q280.08 17.66 280.95 17.66L280.95 17.66Q282.06 17.66 282.58 18.51Q283.11 19.37 283.33 20.50Q283.56 21.64 283.69 22.43L283.69 22.43Q283.80 23.04 283.90 23.65Q284.01 24.27 284.01 24.88L284.01 24.88Q284.01 25.94 283.52 26.87Q283.03 27.81 281.79 27.81L281.79 27.81Q280.55 27.81 279.60 26.95Q278.65 26.09 277.71 24.99Q276.76 23.88 275.52 23.02Q274.28 22.17 272.43 22.17Z"
+            />
+          </g>
+        </svg>
+      </a>
+      <nav class="nav" aria-label="Główna">
+        <a href="#jak">Jak to działa</a>
+        <a href="#pytania">Pytania</a>
+        <a class="btn btn-small" href="#pobierz">Pobierz</a>
+      </nav>
+    </header>
+
+    <main id="tresc">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="badge reveal">
+            <span class="badge-dot"></span> Darmowa beta · Windows 10 i 11
+          </p>
+          <h1 class="display reveal">
+            <span class="accent">Mów.</span><br />Gadopis zapisze.
+          </h1>
+          <p class="lead reveal">
+            Dyktuj po polsku w każdym programie. Naciskasz <kbd>F8</kbd>,
+            mówisz, a tekst pojawia się tam, gdzie jest kursor. Wszystko dzieje
+            się na Twoim komputerze.
+          </p>
+          <div class="cta reveal">
+            <a
+              class="btn btn-primary"
+              data-asset="Gadopis-Setup.exe"
+              href="https://github.com/szydlo84/gadopis-pobierz/releases/latest/download/Gadopis-Setup.exe"
+            >
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" />
+              </svg>
+              Pobierz za darmo
+              <span class="btn-note" data-size="Gadopis-Setup.exe">16 MB</span>
+            </a>
+            <a class="btn btn-ghost" href="#pobierz">Inne wersje</a>
+          </div>
+          <p class="stats reveal" aria-live="polite">
+            <span class="release" data-release>Wersja 0.1.0 beta</span>
+            <span class="counter" data-counter hidden></span>
+          </p>
+        </div>
+
+        <figure class="demo reveal" aria-label="Pokaz działania Gadopisu">
+          <div class="note">
+            <div class="note-bar">
+              <span class="note-dots" aria-hidden="true"
+                ><i></i><i></i><i></i
+              ></span>
+              <span class="note-title">Nowa wiadomość</span>
+            </div>
+            <p class="note-body">
+              <span class="note-text" data-demo-text></span
+              ><span class="caret" aria-hidden="true"></span>
+            </p>
+          </div>
+          <div class="pill" data-demo-pill data-state="idle" aria-hidden="true">
+            <span class="pill-circle"><i></i><i></i><i></i></span>
+            <span class="pill-mid">
+              <span class="pill-bars"
+                ><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
+                ><i></i><i></i><i></i><i></i><i></i
+              ></span>
+              <span class="pill-label" data-demo-label></span>
+            </span>
+            <span class="pill-side" data-demo-side></span>
+          </div>
+          <figcaption class="demo-caption">
+            Tak wygląda dyktowanie: mówisz, Gadopis zapisuje lokalnie i wkleja
+            tekst.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="features" aria-labelledby="dlaczego">
+        <h2 id="dlaczego" class="section-title">
+          Dlaczego <span class="accent">Gadopis</span>
+        </h2>
+        <div class="feature-grid">
+          <article class="feature">
+            <svg class="feature-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 3 5 6v5c0 4.4 3 8.3 7 9.5 4-1.2 7-5.1 7-9.5V6l-7-3Z"
+              />
+              <path d="m9 12 2 2 4-4" />
+            </svg>
+            <h3>Prywatnie</h3>
+            <p>
+              Mowa zamienia się w tekst na Twoim komputerze. Bez chmury, bez
+              konta, bez śledzenia. Internet jest potrzebny tylko raz, do
+              pobrania modelu.
+            </p>
+          </article>
+          <article class="feature">
+            <span class="feature-key" aria-hidden="true">F8</span>
+            <h3>Jeden klawisz</h3>
+            <p>
+              Działa wszędzie, gdzie można pisać: Word, przeglądarka, ChatGPT,
+              Discord, Messenger. Przytrzymaj F8 albo stuknij raz, żeby zacząć.
+            </p>
+          </article>
+          <article class="feature">
+            <svg class="feature-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 7h16M4 12h10M4 17h7" />
+              <path d="m15 16 2 2 4-4" />
+            </svg>
+            <h3>Porządnie po polsku</h3>
+            <p>
+              Modele z najlepszymi wynikami dla polskiego, polskie znaki, kropki
+              i przecinki. Tryb „czysty” usuwa „yyy” i „eee”.
+            </p>
+          </article>
+          <article class="feature">
+            <svg class="feature-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M13 3 5 14h6l-1 7 8-11h-6l1-7Z" />
+            </svg>
+            <h3>Szybko</h3>
+            <p>
+              Na karcie GTX 1080 Ti minuta mowy zamienia się w tekst w niecałe
+              dwie sekundy. Bez karty działa na procesorze, tylko wolniej.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="jak" class="steps" aria-labelledby="jak-tytul">
+        <h2 id="jak-tytul" class="section-title">
+          Trzy kroki do pierwszego tekstu
+        </h2>
+        <ol class="step-list">
+          <li class="step">
+            <span class="step-num" aria-hidden="true">1</span>
+            <h3>Zainstaluj</h3>
+            <p>
+              Pobierz instalator i wybierz zwykłą instalację. Nie potrzebujesz
+              uprawnień administratora.
+            </p>
+          </li>
+          <li class="step">
+            <span class="step-num" aria-hidden="true">2</span>
+            <h3>Wybierz model</h3>
+            <p>
+              Kreator pierwszego uruchomienia dobierze model do Twojego
+              komputera i sam go pobierze.
+            </p>
+          </li>
+          <li class="step">
+            <span class="step-num" aria-hidden="true">3</span>
+            <h3>Naciśnij F8 i mów</h3>
+            <p>
+              Kliknij w pole tekstowe, naciśnij F8, powiedz zdanie i naciśnij F8
+              jeszcze raz. Tekst wklei się sam.
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="shots" aria-labelledby="ekrany">
+        <h2 id="ekrany" class="section-title">Spokojny, polski program</h2>
+        <div class="shot-row">
+          <figure class="shot">
+            <img
+              src="assets/img/okno-ciemne.png"
+              width="720"
+              height="600"
+              loading="lazy"
+              alt="Okno Gadopisu w ciemnym motywie: zakładka Dyktowanie z przyciskiem mikrofonu i wyborem trybu tekstu."
+            />
+            <figcaption>Motyw ciemny</figcaption>
+          </figure>
+          <figure class="shot">
+            <img
+              src="assets/img/okno-jasne.png"
+              width="720"
+              height="600"
+              loading="lazy"
+              alt="To samo okno Gadopisu w jasnym, kremowym motywie."
+            />
+            <figcaption>Motyw jasny</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="pobierz" class="download" aria-labelledby="pobierz-tytul">
+        <h2 id="pobierz-tytul" class="section-title">Pobierz Gadopis</h2>
+        <p class="section-lead">
+          Wszystkie wersje są darmowe. Windows 10 lub 11, 64-bit.
+        </p>
+        <div class="download-grid">
+          <article class="dl dl-main">
+            <p class="dl-tag">Zalecany</p>
+            <h3>Instalator</h3>
+            <p>
+              Zwykła instalacja z menu Start i deinstalatorem albo wersja
+              przenośna do wyboru. Model pobierze się przy pierwszym
+              uruchomieniu.
+            </p>
+            <a
+              class="btn btn-primary"
+              data-asset="Gadopis-Setup.exe"
+              href="https://github.com/szydlo84/gadopis-pobierz/releases/latest/download/Gadopis-Setup.exe"
+              >Pobierz instalator
+              <span class="btn-note" data-size="Gadopis-Setup.exe"
+                >16 MB</span
+              ></a
+            >
+          </article>
+          <article class="dl">
+            <h3>Wersja przenośna z modelami</h3>
+            <p>
+              Jeden folder z modelami w środku. Rozpakuj, uruchom
+              <code>Gadopis.exe</code> i dyktuj bez internetu.
+            </p>
+            <a
+              class="btn btn-outline"
+              data-asset="Gadopis-Portable-Full.zip"
+              href="https://github.com/szydlo84/gadopis-pobierz/releases/latest/download/Gadopis-Portable-Full.zip"
+              >Pobierz ZIP
+              <span class="btn-note" data-size="Gadopis-Portable-Full.zip"
+                >1,5 GB</span
+              ></a
+            >
+          </article>
+          <article class="dl">
+            <h3>Wersja przenośna bez modeli</h3>
+            <p>
+              Najmniejsza paczka. Model wybierzesz i pobierzesz w programie.
+            </p>
+            <a
+              class="btn btn-outline"
+              data-asset="Gadopis-Portable.zip"
+              href="https://github.com/szydlo84/gadopis-pobierz/releases/latest/download/Gadopis-Portable.zip"
+              >Pobierz ZIP
+              <span class="btn-note" data-size="Gadopis-Portable.zip"
+                >31 MB</span
+              ></a
+            >
+          </article>
+        </div>
+
+        <div class="notes">
+          <div class="note-card">
+            <h3>Co jest potrzebne</h3>
+            <ul>
+              <li>Windows 10 lub 11, 64-bit</li>
+              <li>Około 2 GB wolnego miejsca na model</li>
+              <li>Mikrofon (wbudowany w laptopie wystarczy)</li>
+              <li>
+                Karta graficzna z Vulkanem (NVIDIA, AMD, Intel) przyspiesza, ale
+                nie jest wymagana
+              </li>
+            </ul>
+          </div>
+          <div class="note-card">
+            <h3>Ostrzeżenie Windows przy pierwszym uruchomieniu</h3>
+            <p>
+              Program nie jest jeszcze podpisany certyfikatem, więc Windows
+              SmartScreen może go zatrzymać. Kliknij
+              <strong>„Więcej informacji”</strong>, a potem
+              <strong>„Uruchom mimo to”</strong>. Sumy kontrolne plików są w
+              <a
+                href="https://github.com/szydlo84/gadopis-pobierz/releases/latest/download/SHA256SUMS.txt"
+                >SHA256SUMS.txt</a
+              >.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="beta" aria-labelledby="beta-tytul">
+        <div class="beta-card">
+          <h2 id="beta-tytul">To jest darmowa wersja beta</h2>
+          <p>
+            Gadopis jest w fazie testów i za darmo. Coś może jeszcze nie działać
+            tak, jak powinno. Jeśli trafisz na problem albo masz pomysł, napisz:
+            każde zgłoszenie pomaga.
+          </p>
+          <a
+            class="btn btn-outline"
+            href="https://github.com/szydlo84/gadopis-pobierz/issues"
+            >Zgłoś problem albo pomysł</a
+          >
+        </div>
+      </section>
+
+      <section id="pytania" class="faq" aria-labelledby="pytania-tytul">
+        <h2 id="pytania-tytul" class="section-title">Pytania</h2>
+        <details>
+          <summary>Czy Gadopis jest darmowy?</summary>
+          <p>
+            Tak. Wersja beta jest całkowicie darmowa, bez konta i bez reklam.
+          </p>
+        </details>
+        <details>
+          <summary>Czy moje nagrania gdzieś trafiają?</summary>
+          <p>
+            Nie. Rozpoznawanie mowy działa na Twoim komputerze. Program łączy
+            się z internetem tylko wtedy, gdy pobierasz model. Nie ma telemetrii
+            ani automatycznych aktualizacji. Historię dyktowania możesz wyłączyć
+            albo usunąć jednym przyciskiem.
+          </p>
+        </details>
+        <details>
+          <summary>W jakich programach działa?</summary>
+          <p>
+            Wszędzie, gdzie można wpisać tekst: Word, przeglądarka, ChatGPT,
+            Discord, Messenger, Teams, VS Code. Wyjątek to okna uruchomione jako
+            administrator: tam Windows nie pozwala wkleić tekstu, ale znajdziesz
+            go w historii programu.
+          </p>
+        </details>
+        <details>
+          <summary>Czy działa bez internetu?</summary>
+          <p>
+            Tak, po pobraniu modelu. Wersja przenośna z modelami działa bez
+            internetu od pierwszego uruchomienia.
+          </p>
+        </details>
+        <details>
+          <summary>Mój laptop nie reaguje na F8</summary>
+          <p>
+            Na wielu laptopach F8 to klawisz multimedialny. Naciśnij Fn+F8 albo
+            zmień skrót w ustawieniach programu.
+          </p>
+        </details>
+        <details>
+          <summary>Na czym opiera się Gadopis?</summary>
+          <p>
+            Na otwartym projekcie
+            <a href="https://github.com/cjpais/Handy">Handy</a> (licencja MIT) i
+            silniku transcribe.cpp. Modele mowy pochodzą od OpenAI (Whisper) i
+            NVIDIA (Parakeet). Licencje są w folderze LICENSES w każdej paczce.
+          </p>
+        </details>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <svg class="foot-mark" viewBox="0 0 64 64" aria-hidden="true">
+        <path
+          class="logo-circle"
+          d="M0 32A32 32 0 1 0 64 32A32 32 0 1 0 0 32Z"
+        />
+        <path
+          class="logo-bars"
+          d="M14 20.25H14A2.75 2.75 0 0 1 16.75 23V41A2.75 2.75 0 0 1 14 43.75H14A2.75 2.75 0 0 1 11.25 41V23A2.75 2.75 0 0 1 14 20.25ZM22 13.25H22A2.75 2.75 0 0 1 24.75 16V48A2.75 2.75 0 0 1 22 50.75H22A2.75 2.75 0 0 1 19.25 48V16A2.75 2.75 0 0 1 22 13.25ZM30 22.25H30A2.75 2.75 0 0 1 32.75 25V39A2.75 2.75 0 0 1 30 41.75H30A2.75 2.75 0 0 1 27.25 39V25A2.75 2.75 0 0 1 30 22.25ZM38 29.25H50A2.75 2.75 0 0 1 52.75 32V32A2.75 2.75 0 0 1 50 34.75H38A2.75 2.75 0 0 1 35.25 32V32A2.75 2.75 0 0 1 38 29.25Z"
+        />
+      </svg>
+      <p>
+        Gadopis · darmowa wersja beta · strona bez ciasteczek i bez śledzenia
+      </p>
+      <p class="foot-small">
+        Oparte na <a href="https://github.com/cjpais/Handy">Handy</a> (MIT).
+        Pliki do pobrania:
+        <a href="https://github.com/szydlo84/gadopis-pobierz/releases">GitHub</a
+        >.
+      </p>
+    </footer>
+  </body>
+</html>
