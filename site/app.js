@@ -6,6 +6,9 @@ const CACHE_KEY = "gadopis-releases-v1";
 const CACHE_MS = 10 * 60 * 1000;
 // Below this many downloads the page invites early testers instead of a number.
 const MIN_COUNT = 1;
+// Downloads of older releases, which are hidden as drafts and so no longer in
+// the public API: 0.1.0 (6) and 0.1.2 (3), frozen when they were hidden.
+const HIDDEN_DOWNLOADS = 9;
 
 const reducedMotion = window.matchMedia(
   "(prefers-reduced-motion: reduce)",
@@ -76,7 +79,7 @@ function showReleases(releases) {
   const total = published
     .flatMap((release) => release.assets)
     .filter((asset) => !asset.name.endsWith(".txt"))
-    .reduce((sum, asset) => sum + asset.count, 0);
+    .reduce((sum, asset) => sum + asset.count, HIDDEN_DOWNLOADS);
   const counterEl = document.querySelector("[data-counter]");
   if (!counterEl) return;
   counterEl.textContent = "";
