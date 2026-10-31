@@ -22,9 +22,12 @@
   --surface: #ebddc5;
   --raised: #f9f4ed;
   --line: #dcd3c4;
+  --line-strong: #a19786;
   --text: #201e1d;
   --text-2: #645c50;
   --text-3: #8a7f6e;
+  /* onplan's single accent, the arrow in the author card. */
+  --onplan: #3358ff;
   --clay: #c67139;
   --clay-hover: #b2622d;
   --clay-press: #8c491a;
@@ -48,9 +51,11 @@
     --surface: #2e2b25;
     --raised: #2a2723;
     --line: #474238;
+    --line-strong: #82796a;
     --text: #f5ead8;
     --text-2: #c0b6a5;
     --text-3: #9b917f;
+    --onplan: #7d93ff;
     --clay: #d67f48;
     --clay-hover: #f6a06b;
     --clay-press: #b2622d;
@@ -1023,6 +1028,171 @@ main > section:not(.hero) {
   max-width: 70ch;
   margin: 0 0 20px;
   color: var(--text-2);
+}
+
+/* ---------- from the author ---------- */
+
+/* The author's other project, after the FAQ. Gadopis tokens throughout:
+   onplan shows only as its logo (in the text color) and the arrow's accent.
+   Clay stays for downloading Gadopis. Static on purpose. */
+main > section.author {
+  padding-top: 0;
+  padding-bottom: 24px;
+}
+
+.author-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    "head"
+    "title"
+    "text"
+    "cta";
+  row-gap: 6px;
+  padding: 24px;
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-card);
+  background: var(--raised);
+  transition: border-color 0.15s ease;
+}
+
+.author-card:hover {
+  border-color: var(--line-strong);
+}
+
+.author-head {
+  grid-area: head;
+  display: grid;
+  justify-items: start;
+  gap: 16px;
+}
+
+.author-logo {
+  display: block;
+  width: auto;
+  height: 24px;
+  color: var(--text);
+}
+
+.author-label {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+.author-title {
+  grid-area: title;
+  margin: 0;
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.author-text {
+  grid-area: text;
+  max-width: 64ch;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-2);
+}
+
+.btn.author-cta {
+  grid-area: cta;
+  min-height: 44px;
+  margin-top: 10px;
+  padding: 0 20px;
+  border: 1.5px solid var(--line);
+  font-size: 15px;
+  color: var(--text);
+}
+
+.btn.author-cta:hover {
+  background: var(--surface);
+}
+
+.author-arrow {
+  width: 16px;
+  height: 16px;
+  color: var(--onplan);
+  transition: transform 0.15s ease;
+}
+
+.author-cta:hover .author-arrow {
+  transform: translate(2px, -2px);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (min-width: 521px) {
+  .author-card {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "head cta"
+      "title cta"
+      "text cta";
+    column-gap: 24px;
+    align-items: end;
+  }
+
+  .author-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 6px;
+  }
+
+  .author-logo {
+    height: 26px;
+  }
+
+  .btn.author-cta {
+    margin-top: 0;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 980px) {
+  .author-card {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-areas:
+      "logo label cta"
+      "logo title cta"
+      "logo text cta";
+    column-gap: 32px;
+    row-gap: 4px;
+    align-items: center;
+    padding: 24px 24px 24px 32px;
+  }
+
+  /* The logo and label become cells of the card's grid. */
+  .author-head {
+    display: contents;
+  }
+
+  .author-logo {
+    grid-area: logo;
+    height: 28px;
+  }
+
+  .author-label {
+    grid-area: label;
+  }
+
+  .author-title {
+    font-size: 20px;
+  }
 }
 
 /* ---------- footer ---------- */
