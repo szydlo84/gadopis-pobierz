@@ -177,7 +177,8 @@ function startDemo() {
       label.textContent = "Zapisuję…";
       side.textContent = "lokalnie";
       setState("working");
-      await sleep(1100);
+      // Kept short: the demo should show the text coming back right away.
+      await sleep(400);
 
       paste(sentence);
       label.textContent = `Wklejono ${words} ${wordsLabel(words)}`;
