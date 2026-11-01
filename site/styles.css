@@ -818,53 +818,126 @@ main > section:not(.hero) {
   color: var(--text-2);
 }
 
-.shot-row {
-  display: flex;
-  gap: 18px;
-  margin: 0 -20px;
-  padding: 0 20px 12px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
+/* ---------- the app window and the F8 animation ---------- */
+
+.showcase {
+  display: grid;
+  gap: 28px;
 }
 
-.shot-row::-webkit-scrollbar {
-  display: none;
+.showcase-copy .section-title {
+  margin-bottom: 14px;
 }
 
-.shot {
-  flex: 0 0 min(84vw, 540px);
+.showcase-copy p {
+  max-width: 42ch;
   margin: 0;
-  scroll-snap-align: center;
+  font-size: clamp(17px, 2vw, 19px);
+  color: var(--text-2);
 }
 
-@media (min-width: 980px) {
-  .shot-row {
-    margin: 0;
-    padding: 0;
-    overflow: visible;
-  }
-
-  .shot {
-    flex: 1 1 0;
-  }
-
-  .shot:nth-child(2) {
-    transform: translateY(28px);
-  }
+.showcase-shot {
+  max-width: 720px;
+  margin: 0;
 }
 
-.shot img {
+.showcase-shot img {
   border: 1px solid var(--line);
   border-radius: 18px;
   box-shadow: var(--shadow);
 }
 
-.shot figcaption {
-  margin-top: 12px;
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--text-3);
+/* A loop recorded from the app: dark in both themes, like the recording pill.
+   app.js plays it only while it is on screen. The ring shows its edge on the
+   dark page, where the video and the background are nearly the same color. */
+.film {
+  position: relative;
+  justify-self: center;
+  width: min(100%, 82vh * 1.6);
+  width: min(100%, 82svh * 1.6);
+  margin: 0;
+  border-radius: var(--radius-card);
+  background: #1f1d1b;
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--text) 9%, transparent),
+    var(--shadow);
+}
+
+.film video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: inherit;
+}
+
+.film-toggle {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid rgba(245, 234, 216, 0.16);
+  border-radius: 50%;
+  background: rgba(32, 30, 29, 0.66);
+  color: #f5ead8;
+  cursor: pointer;
+  opacity: 0.75;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  transition:
+    opacity 0.15s ease,
+    background-color 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.film-toggle[hidden] {
+  display: none;
+}
+
+.film-toggle:hover,
+.film-toggle:focus-visible {
+  opacity: 1;
+  background: rgba(32, 30, 29, 0.86);
+}
+
+.film-toggle svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.film-play path {
+  stroke: currentColor;
+  stroke-width: 2.4;
+  stroke-linejoin: round;
+}
+
+.film-toggle[data-state="playing"] .film-play,
+.film-toggle[data-state="paused"] .film-pause {
+  display: none;
+}
+
+/* Phones get the middle of the frame, where the text field and F8 are. */
+@media (max-width: 520px) {
+  .film video {
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 980px) {
+  .showcase {
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    align-items: center;
+    gap: 56px;
+  }
+
+  .film {
+    grid-column: 1 / -1;
+  }
 }
 
 /* ---------- download ---------- */

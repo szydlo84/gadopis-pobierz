@@ -236,30 +236,61 @@
         </ol>
       </section>
 
-      <section class="shots" aria-labelledby="ekrany">
-        <h2 id="ekrany" class="section-title">Spokojny, polski program</h2>
-        <div class="shot-row">
-          <figure class="shot">
-            <img
-              src="assets/img/okno-ciemne.png"
-              width="720"
-              height="600"
-              loading="lazy"
-              alt="Okno Gadopisu w ciemnym motywie: zakładka Dyktowanie z przyciskiem mikrofonu i wyborem trybu tekstu."
-            />
-            <figcaption>Motyw ciemny</figcaption>
-          </figure>
-          <figure class="shot">
-            <img
-              src="assets/img/okno-jasne.png"
-              width="720"
-              height="600"
-              loading="lazy"
-              alt="To samo okno Gadopisu w jasnym, kremowym motywie."
-            />
-            <figcaption>Motyw jasny</figcaption>
-          </figure>
+      <section class="showcase" aria-labelledby="okno-tytul">
+        <div class="showcase-copy">
+          <h2 id="okno-tytul" class="section-title">
+            Ustawiasz raz, potem tylko F8
+          </h2>
+          <p>
+            W oknie programu wybierasz model i tryb tekstu. Potem możesz je
+            zamknąć: Gadopis zostaje w tle, a <kbd>F8</kbd> działa w każdym
+            programie.
+          </p>
         </div>
+        <figure class="showcase-shot">
+          <img
+            src="assets/img/okno-dyktowanie.webp"
+            width="720"
+            height="500"
+            loading="lazy"
+            alt="Okno Gadopisu w ciemnym motywie: zakładka Dyktowanie ze skrótem F8, aktywnym modelem i wyborem trybu tekstu."
+          />
+        </figure>
+        <figure class="film">
+          <video
+            data-film
+            width="1920"
+            height="1200"
+            muted
+            loop
+            playsinline
+            controls
+            preload="none"
+            poster="assets/video/dyktowanie-f8.webp"
+          >
+            <source src="assets/video/dyktowanie-f8.mp4" type="video/mp4" />
+          </video>
+          <figcaption class="visually-hidden">
+            Animacja: przytrzymanie klawisza F8 włącza nagrywanie, a po jego
+            puszczeniu Gadopis wkleja podyktowane zdanie w pole nowej
+            wiadomości.
+          </figcaption>
+          <button
+            class="film-toggle"
+            type="button"
+            data-film-toggle
+            aria-label="Odtwórz animację"
+            hidden
+          >
+            <svg class="film-pause" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="6.5" y="5.5" width="4" height="13" rx="1.4" />
+              <rect x="13.5" y="5.5" width="4" height="13" rx="1.4" />
+            </svg>
+            <svg class="film-play" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 6.5v11l9-5.5Z" />
+            </svg>
+          </button>
+        </figure>
       </section>
 
       <section id="pobierz" class="download" aria-labelledby="pobierz-tytul">

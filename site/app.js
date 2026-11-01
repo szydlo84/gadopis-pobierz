@@ -200,3 +200,57 @@ function startDemo() {
 }
 
 startDemo();
+
+// ---------- F8 animation ----------
+
+// The loop plays only while it is on screen. For reduced motion it starts
+// paused on its poster, and the button plays it.
+function startFilm() {
+  const video = document.querySelector("[data-film]");
+  const toggle = document.querySelector("[data-film-toggle]");
+  if (!video || !toggle) return;
+
+  // Without JavaScript the browser's own controls stay.
+  video.controls = false;
+  toggle.hidden = false;
+
+  let wanted = !reducedMotion;
+  let visible = false;
+
+  const update = () => {
+    if (wanted && visible) {
+      video.play().catch(() => {
+        // Autoplay can be blocked (e.g. iOS Low Power Mode); the button plays it.
+      });
+    } else {
+      video.pause();
+    }
+  };
+
+  const showState = () => {
+    const playing = !video.paused;
+    toggle.dataset.state = playing ? "playing" : "paused";
+    toggle.setAttribute(
+      "aria-label",
+      playing ? "Zatrzymaj animację" : "Odtwórz animację",
+    );
+  };
+  video.addEventListener("play", showState);
+  video.addEventListener("pause", showState);
+  showState();
+
+  toggle.addEventListener("click", () => {
+    wanted = video.paused;
+    update();
+  });
+
+  new IntersectionObserver(
+    ([entry]) => {
+      visible = entry.isIntersecting;
+      update();
+    },
+    { rootMargin: "200px 0px" },
+  ).observe(video);
+}
+
+startFilm();
