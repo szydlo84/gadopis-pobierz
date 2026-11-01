@@ -1,4 +1,5 @@
-// Gadopis landing page: live download counter and the dictation demo.
+// Gadopis landing page: live download counter, the dictation demo, the F8
+// animation and the consent for statistics.
 "use strict";
 
 const REPO = "szydlo84/gadopis-pobierz";
@@ -255,3 +256,107 @@ function startFilm() {
 }
 
 startFilm();
+
+// ---------- statistics: Google Analytics, only with consent ----------
+
+// The GA4 measurement ID ("G-…"). Empty keeps the page without statistics:
+// no banner and nothing loaded from Google.
+const GA_ID = "G-539JQVK1GH";
+const CONSENT_KEY = "gadopis-zgoda-statystyki";
+
+function readConsent() {
+  try {
+    return localStorage.getItem(CONSENT_KEY);
+  } catch {
+    return null;
+  }
+}
+
+function saveConsent(choice) {
+  try {
+    localStorage.setItem(CONSENT_KEY, choice);
+  } catch {
+    // Storage blocked: the banner asks again next time.
+  }
+}
+
+let analyticsLoaded = false;
+
+// Google's tag is fetched only after "Zgadzam się", so nothing reaches Google
+// before that. Ads stay off.
+function startAnalytics() {
+  if (analyticsLoaded) {
+    window.gtag("consent", "update", { analytics_storage: "granted" });
+    return;
+  }
+  analyticsLoaded = true;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function gtag() {
+    window.dataLayer.push(arguments);
+  };
+  window.gtag("consent", "default", {
+    analytics_storage: "granted",
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+  });
+  window.gtag("js", new Date());
+  window.gtag("config", GA_ID, {
+    allow_google_signals: false,
+    allow_ad_personalization_signals: false,
+  });
+  const script = document.createElement("script");
+  script.async = true;
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+  document.head.append(script);
+}
+
+// Consent withdrawn: measuring stops and the statistics cookies go.
+function stopAnalytics() {
+  if (analyticsLoaded) {
+    window.gtag("consent", "update", { analytics_storage: "denied" });
+  }
+  const host = location.hostname;
+  for (const cookie of document.cookie.split(";")) {
+    const name = cookie.split("=")[0].trim();
+    if (name !== "_ga" && !name.startsWith("_ga_")) continue;
+    for (const domain of ["", `; domain=${host}`, `; domain=.${host}`]) {
+      document.cookie = `${name}=; max-age=0; path=/${domain}`;
+    }
+  }
+}
+
+function startConsent() {
+  const banner = document.querySelector("[data-consent]");
+  if (!GA_ID || !banner) return;
+  const settings = document.querySelector("[data-consent-settings]");
+  if (settings) settings.hidden = false;
+
+  const apply = (choice) =>
+    choice === "granted" ? startAnalytics() : stopAnalytics();
+  const stored = readConsent();
+  if (stored) {
+    apply(stored);
+  } else {
+    banner.hidden = false;
+  }
+
+  for (const button of banner.querySelectorAll("[data-consent-choice]")) {
+    button.addEventListener("click", () => {
+      const choice = button.dataset.consentChoice;
+      saveConsent(choice);
+      banner.hidden = true;
+      apply(choice);
+    });
+  }
+
+  const open = document.querySelector("[data-consent-open]");
+  if (open) {
+    open.addEventListener("click", () => {
+      banner.hidden = false;
+      banner.querySelector("[data-consent-choice]").focus();
+    });
+  }
+}
+
+startConsent();

@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
-    <title>Gadopis: dyktowanie po polsku dla Windows</title>
+    <title>Gadopis: darmowy program do dyktowania po polsku (Windows)</title>
     <meta
       name="description"
       content="Darmowa aplikacja do dyktowania po polsku dla Windows 10 i 11. Naciskasz F8, mówisz, a tekst pojawia się tam, gdzie jest kursor. Działa na Twoim komputerze, bez chmury i bez konta."
@@ -22,6 +22,7 @@
       media="(prefers-color-scheme: dark)"
     />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Gadopis" />
     <meta property="og:locale" content="pl_PL" />
     <meta property="og:title" content="Gadopis. Mów. Gadopis zapisze." />
     <meta
@@ -37,6 +38,7 @@
     <meta property="og:image:height" content="640" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href="https://gadopis.pl/" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
     <link
       rel="icon"
@@ -54,6 +56,39 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <script src="app.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://gadopis.pl/#strona",
+            "url": "https://gadopis.pl/",
+            "name": "Gadopis",
+            "inLanguage": "pl-PL"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://gadopis.pl/#program",
+            "name": "Gadopis",
+            "url": "https://gadopis.pl/",
+            "description": "Darmowy program do dyktowania po polsku dla Windows 10 i 11. Zamienia mowę na tekst w każdym programie i robi napisy do filmów. Działa na komputerze, bez chmury i bez konta.",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Windows 10, Windows 11",
+            "inLanguage": "pl",
+            "isAccessibleForFree": true,
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "PLN"
+            },
+            "downloadUrl": "https://github.com/szydlo84/gadopis-pobierz/releases/latest/download/Gadopis-Setup.exe",
+            "screenshot": "https://gadopis.pl/assets/img/okno-dyktowanie.webp",
+            "image": "https://gadopis.pl/assets/img/gadopis-podglad.png"
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <a class="skip" href="#tresc">Przejdź do treści</a>
@@ -117,7 +152,7 @@
             <a class="btn btn-ghost" href="#pobierz">Inne wersje</a>
           </div>
           <p class="stats reveal" aria-live="polite">
-            <span class="release" data-release>Wersja 0.1.0 beta</span>
+            <span class="release" data-release>Wersja beta</span>
             <span class="counter" data-counter hidden></span>
           </p>
         </div>
@@ -536,15 +571,48 @@
           d="M14 20.25H14A2.75 2.75 0 0 1 16.75 23V41A2.75 2.75 0 0 1 14 43.75H14A2.75 2.75 0 0 1 11.25 41V23A2.75 2.75 0 0 1 14 20.25ZM22 13.25H22A2.75 2.75 0 0 1 24.75 16V48A2.75 2.75 0 0 1 22 50.75H22A2.75 2.75 0 0 1 19.25 48V16A2.75 2.75 0 0 1 22 13.25ZM30 22.25H30A2.75 2.75 0 0 1 32.75 25V39A2.75 2.75 0 0 1 30 41.75H30A2.75 2.75 0 0 1 27.25 39V25A2.75 2.75 0 0 1 30 22.25ZM38 29.25H50A2.75 2.75 0 0 1 52.75 32V32A2.75 2.75 0 0 1 50 34.75H38A2.75 2.75 0 0 1 35.25 32V32A2.75 2.75 0 0 1 38 29.25Z"
         />
       </svg>
-      <p>
-        Gadopis · darmowa wersja beta · strona bez ciasteczek i bez śledzenia
-      </p>
+      <p>Gadopis · darmowa wersja beta</p>
       <p class="foot-small">
         Oparte na <a href="https://github.com/cjpais/Handy">Handy</a> (MIT).
         Pliki do pobrania:
         <a href="https://github.com/szydlo84/gadopis-pobierz/releases">GitHub</a
         >.
       </p>
+      <p class="foot-small">
+        <a href="/prywatnosc">Polityka prywatności</a
+        ><span data-consent-settings hidden>
+          ·
+          <button class="foot-link" type="button" data-consent-open>
+            Ustawienia statystyk
+          </button></span
+        >
+      </p>
     </footer>
+
+    <section class="consent" data-consent aria-labelledby="zgoda-tytul" hidden>
+      <h2 id="zgoda-tytul" class="consent-title">Statystyki odwiedzin</h2>
+      <p class="consent-text">
+        Za Twoją zgodą strona liczy odwiedziny w Google Analytics, żeby było
+        wiadomo, ile osób tu trafia i skąd. Zapisuje do tego ciasteczka. Sam
+        program Gadopis nie wysyła nagrań ani tekstów.
+        <a href="/prywatnosc">Polityka prywatności</a>
+      </p>
+      <div class="consent-actions">
+        <button
+          class="btn btn-outline"
+          type="button"
+          data-consent-choice="granted"
+        >
+          Zgadzam się
+        </button>
+        <button
+          class="btn btn-outline"
+          type="button"
+          data-consent-choice="denied"
+        >
+          Nie zgadzam się
+        </button>
+      </div>
+    </section>
   </body>
 </html>

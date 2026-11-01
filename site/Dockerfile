@@ -3,7 +3,7 @@
 FROM nginx:stable-alpine
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY index.html styles.css app.js robots.txt /usr/share/nginx/html/
+COPY index.html prywatnosc.html 404.html styles.css app.js robots.txt sitemap.xml favicon.ico /usr/share/nginx/html/
 COPY assets /usr/share/nginx/html/assets
 
 EXPOSE 80
