@@ -5,14 +5,18 @@
 
 @font-face {
   font-family: "Figtree";
-  src: url("assets/fonts/Figtree-Variable.ttf") format("truetype");
+  src:
+    url("assets/fonts/Figtree-Variable.woff2") format("woff2"),
+    url("assets/fonts/Figtree-Variable.ttf") format("truetype");
   font-weight: 300 900;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Caprasimo";
-  src: url("assets/fonts/Caprasimo-Regular.ttf") format("truetype");
+  src:
+    url("assets/fonts/Caprasimo-Regular.woff2") format("woff2"),
+    url("assets/fonts/Caprasimo-Regular.ttf") format("truetype");
   font-weight: 400;
   font-display: swap;
 }
@@ -389,6 +393,18 @@ code {
   color: var(--clay-text);
 }
 
+/* What the program is, inside the h1 for search engines, set in the text
+   face under the slogan. */
+.display-sub {
+  display: block;
+  margin-top: 18px;
+  font-family: var(--font);
+  font-size: clamp(19px, 2.4vw, 24px);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
 .lead {
   max-width: 34ch;
   margin: 0 0 30px;
@@ -723,6 +739,10 @@ main > section:not(.hero) {
 @media (min-width: 1040px) {
   .feature-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .feature-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -1424,6 +1444,12 @@ main > section.author {
 
 .hero-copy .reveal:nth-child(2) {
   animation-delay: 0.06s;
+}
+
+/* The heading is the largest thing on first load (Google's LCP), so it is
+   visible from the first frame and only slides in. */
+.display.reveal {
+  opacity: 1;
 }
 
 .hero-copy .reveal:nth-child(3) {

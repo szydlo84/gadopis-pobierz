@@ -9,7 +9,7 @@
     <title>Gadopis: darmowy program do dyktowania po polsku (Windows)</title>
     <meta
       name="description"
-      content="Darmowa aplikacja do dyktowania po polsku dla Windows 10 i 11. Naciskasz F8, mówisz, a tekst pojawia się tam, gdzie jest kursor. Działa na Twoim komputerze, bez chmury i bez konta."
+      content="Gadopis zamienia mowę na tekst po polsku w każdym programie na Windows 10 i 11. Naciskasz F8 i mówisz. Za darmo, bez konta i bez chmury. Robi też napisy .srt."
     />
     <meta
       name="theme-color"
@@ -36,6 +36,10 @@
     />
     <meta property="og:image:width" content="1280" />
     <meta property="og:image:height" content="640" />
+    <meta
+      property="og:image:alt"
+      content="Logo gadopis i hasło „Gadaj, gadopis to zapisze.”: lokalna zamiana mowy na tekst na Windows 10 i 11"
+    />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href="https://gadopis.pl/" />
     <link rel="icon" href="/favicon.ico" sizes="48x48" />
@@ -49,9 +53,16 @@
     <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
     <link
       rel="preload"
-      href="assets/fonts/Figtree-Variable.ttf"
+      href="assets/fonts/Figtree-Variable.woff2"
       as="font"
-      type="font/ttf"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/Caprasimo-Regular.woff2"
+      as="font"
+      type="font/woff2"
       crossorigin
     />
     <link rel="stylesheet" href="styles.css" />
@@ -65,7 +76,9 @@
             "@id": "https://gadopis.pl/#strona",
             "url": "https://gadopis.pl/",
             "name": "Gadopis",
-            "inLanguage": "pl-PL"
+            "alternateName": "gadopis.pl",
+            "inLanguage": "pl-PL",
+            "publisher": { "@id": "https://gadopis.pl/#autor" }
           },
           {
             "@type": "SoftwareApplication",
@@ -82,13 +95,19 @@
               "price": "0",
               "priceCurrency": "PLN"
             },
-            "author": {
-              "@type": "Person",
-              "name": "Piotr Szydłowski"
-            },
+            "author": { "@id": "https://gadopis.pl/#autor" },
+            "publisher": { "@id": "https://gadopis.pl/#autor" },
+            "sameAs": ["https://github.com/szydlo84/gadopis-pobierz"],
+            "isBasedOn": "https://github.com/cjpais/Handy",
             "downloadUrl": "https://github.com/szydlo84/gadopis-pobierz/releases/latest/download/Gadopis-Setup.exe",
             "screenshot": "https://gadopis.pl/assets/img/okno-dyktowanie.webp",
             "image": "https://gadopis.pl/assets/img/gadopis-podglad-to-zapisze.png"
+          },
+          {
+            "@type": "Person",
+            "@id": "https://gadopis.pl/#autor",
+            "name": "Piotr Szydłowski",
+            "sameAs": ["https://github.com/szydlo84"]
           }
         ]
       }
@@ -102,7 +121,7 @@
     </div>
 
     <header class="top">
-      <a class="brand" href="#" aria-label="Gadopis, strona główna">
+      <a class="brand" href="/" aria-label="Gadopis, strona główna">
         <svg class="logo" viewBox="0 0 285 69" aria-hidden="true">
           <g transform="translate(0 4.07)">
             <path
@@ -135,11 +154,14 @@
           </p>
           <h1 class="display reveal">
             <span class="accent">Gadaj,</span><br />gadopis to&nbsp;zapisze.
+            <span class="display-sub"
+              >Darmowy program do dyktowania po&nbsp;polsku</span
+            >
           </h1>
           <p class="lead reveal">
-            Dyktuj po polsku w każdym programie. Naciskasz <kbd>F8</kbd>,
-            mówisz, a tekst pojawia się tam, gdzie jest kursor. Wszystko dzieje
-            się na Twoim komputerze.
+            Działa w Wordzie, przeglądarce, ChatGPT i wszędzie, gdzie piszesz.
+            Naciskasz <kbd>F8</kbd>, mówisz, a tekst pojawia się tam, gdzie jest
+            kursor. Wszystko dzieje się na Twoim komputerze.
           </p>
           <div class="cta reveal">
             <a
@@ -245,7 +267,7 @@
 
       <section id="jak" class="steps" aria-labelledby="jak-tytul">
         <h2 id="jak-tytul" class="section-title">
-          Trzy kroki do pierwszego tekstu
+          Jak dyktować na Windows w trzech krokach
         </h2>
         <ol class="step-list">
           <li class="step">
@@ -331,6 +353,52 @@
             </svg>
           </button>
         </figure>
+      </section>
+
+      <section id="nagrania" class="files" aria-labelledby="nagrania-tytul">
+        <h2 id="nagrania-tytul" class="section-title">
+          Transkrypcja nagrań i napisy do filmów
+        </h2>
+        <p class="section-lead">
+          Gadopis zamienia na tekst także gotowe nagrania. Przeciągnij plik na
+          okno programu, a tekst pojawi się w historii.
+        </p>
+        <div class="feature-grid feature-grid-3">
+          <article class="feature">
+            <svg class="feature-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 10v4M8 7v10M12 4v16M16 8v8M20 11v2" />
+            </svg>
+            <h3>Nagrania i filmy</h3>
+            <p>
+              Wywiad, wykład, notatka głosowa albo film: MP3, M4A, WAV, FLAC,
+              MP4 i MOV. Długie nagrania program sam dzieli na części.
+            </p>
+          </article>
+          <article class="feature">
+            <svg class="feature-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="14" rx="3" />
+              <path d="M7 12h6M15 12h2M7 15h3M12 15h5" />
+            </svg>
+            <h3>Napisy .srt</h3>
+            <p>
+              Zaznacz „Napisy do filmu (.srt)”, a dostaniesz napisy z czasami, w
+              UTF-8 z polskimi znakami. Plik zapisuje się obok filmu, więc
+              odtwarzacz wczyta go sam.
+            </p>
+          </article>
+          <article class="feature">
+            <svg class="feature-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="12" rx="2" />
+              <path d="M8 20h8M12 16v4" />
+              <path d="m9 10 2 2 4-4" />
+            </svg>
+            <h3>Bez wysyłania plików</h3>
+            <p>
+              Nagranie nie opuszcza komputera. Nie ma limitu minut ani kolejki
+              na serwerze, a gotowy tekst skopiujesz z historii.
+            </p>
+          </article>
+        </div>
       </section>
 
       <section id="pobierz" class="download" aria-labelledby="pobierz-tytul">
@@ -436,13 +504,32 @@
       </section>
 
       <section id="pytania" class="faq" aria-labelledby="pytania-tytul">
-        <h2 id="pytania-tytul" class="section-title">Pytania</h2>
+        <h2 id="pytania-tytul" class="section-title">Pytania o Gadopis</h2>
         <details>
           <summary>Czy Gadopis jest darmowy?</summary>
           <p>
             Tak. Wersja beta jest całkowicie darmowa, bez konta i bez reklam. Na
             dole tej strony i w zakładce O programie jest tylko odnośnik do
             innego projektu autora.
+          </p>
+        </details>
+        <details>
+          <summary>
+            Czym Gadopis różni się od dyktowania w Windows (Win+H)?
+          </summary>
+          <p>
+            Dyktowanie w Windows 11 zna polski, ale działa tylko z internetem:
+            mowa trafia do usług Microsoftu. Windows 10 nie dyktuje po polsku
+            wcale. Gadopis rozpoznaje mowę na Twoim komputerze, także bez
+            internetu, w Windows 10 i 11.
+          </p>
+        </details>
+        <details>
+          <summary>Czy działa na Windows 10?</summary>
+          <p>
+            Tak, na Windows 10 i 11 w wersji 64-bitowej. Na Windows 10 to prosty
+            sposób na dyktowanie po polsku, bo wbudowane dyktowanie tego systemu
+            nie obsługuje polskiego.
           </p>
         </details>
         <details>
@@ -453,6 +540,16 @@
             dziennie sprawdza na GitHubie, czy jest nowa wersja (można to
             wyłączyć). Nie ma telemetrii. Historię dyktowania możesz wyłączyć
             albo usunąć jednym przyciskiem.
+          </p>
+        </details>
+        <details>
+          <summary>Czy Gadopis jest bezpieczny?</summary>
+          <p>
+            Program działa na Twoim komputerze i nie wysyła nagrań. Opiera się
+            na otwartym projekcie Handy, a pliki pobierasz prosto z GitHuba. Ich
+            sumy kontrolne są w SHA256SUMS.txt. Program nie jest jeszcze
+            podpisany certyfikatem, dlatego przy pierwszym uruchomieniu Windows
+            może pokazać ostrzeżenie SmartScreen.
           </p>
         </details>
         <details>
@@ -537,9 +634,9 @@
             </svg>
             <p class="author-label">Od twórcy Gadopisu</p>
           </div>
-          <h2 id="autor-tytul" class="author-title">
+          <p id="autor-tytul" class="author-title">
             Zanim kupisz działkę, zobacz na niej swój dom
-          </h2>
+          </p>
           <p class="author-text">
             Poza Gadopisem tworzę onplan. Wskazujesz działkę na mapie, a onplan
             sprawdza przepisy i teren, po czym proponuje, gdzie i jaki budynek
