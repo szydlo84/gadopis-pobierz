@@ -1,6 +1,6 @@
 # Gadopis: pobieranie i strona
 
-**Gadaj. Gadopis zapisze.** Gadopis to darmowa aplikacja do dyktowania po polsku dla Windows 10 i 11. Naciskasz F8, mówisz, a tekst pojawia się tam, gdzie jest kursor: w Wordzie, przeglądarce, ChatGPT czy Discordzie. Rozpoznawanie mowy działa w całości na Twoim komputerze, bez konta i bez chmury.
+**Gadaj, gadopis to zapisze.** Gadopis to darmowa aplikacja do dyktowania po polsku dla Windows 10 i 11. Naciskasz F8, mówisz, a tekst pojawia się tam, gdzie jest kursor: w Wordzie, przeglądarce, ChatGPT czy Discordzie. Rozpoznawanie mowy działa w całości na Twoim komputerze, bez konta i bez chmury.
 
 Strona: **[gadopis.pl](https://gadopis.pl)**
 

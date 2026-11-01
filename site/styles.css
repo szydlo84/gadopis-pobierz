@@ -986,14 +986,15 @@ main > section:not(.hero) {
   align-self: stretch;
 }
 
-.dl-tag {
+/* Size and margin come from .dl p; flex: none keeps the pill from growing. */
+.dl .dl-tag {
+  flex: none;
   align-self: flex-start;
-  margin: 0;
   padding: 4px 11px;
   border-radius: 999px;
   background: var(--clay);
-  color: var(--on-clay);
-  font-size: 12px;
+  /* White, not the dark on-clay: it reads clearly better on clay. */
+  color: #fff;
   font-weight: 800;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -1174,6 +1175,16 @@ main > section.author {
   color: var(--text-2);
 }
 
+/* The signature: its own line under the note, set off to the right. */
+.author-sign {
+  display: block;
+  margin-top: 14px;
+  text-align: right;
+  font-style: italic;
+  white-space: nowrap;
+  color: var(--text);
+}
+
 .btn.author-cta {
   grid-area: cta;
   min-height: 44px;
@@ -1197,11 +1208,6 @@ main > section.author {
 
 .author-cta:hover .author-arrow {
   transform: translate(2px, -2px);
-}
-
-/* Keeps a short phrase, like the signature under the author's note, whole. */
-.nowrap {
-  white-space: nowrap;
 }
 
 .visually-hidden {
