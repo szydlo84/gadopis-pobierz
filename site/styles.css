@@ -1199,6 +1199,11 @@ main > section.author {
   transform: translate(2px, -2px);
 }
 
+/* Keeps a short phrase, like the signature under the author's note, whole. */
+.nowrap {
+  white-space: nowrap;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
