@@ -1414,9 +1414,96 @@ main > section.author {
   color: var(--clay-text);
 }
 
-.page-note {
+/* Outranks .page p, which would make the note as big as the text. */
+.page .page-note {
   font-size: 15px;
   color: var(--text-3);
+}
+
+/* Guides: the short answer up top, a comparison table and a download call. */
+.answer {
+  margin: 22px 0 8px;
+  padding: 18px 22px;
+  border: 1.5px solid var(--line);
+  border-left: 4px solid var(--clay);
+  border-radius: 16px;
+  background: var(--surface);
+}
+
+.page .answer p {
+  margin: 0;
+  color: var(--text);
+}
+
+/* The table scrolls inside its box on phones, never the page. */
+.table-wrap {
+  overflow-x: auto;
+  margin: 14px 0 4px;
+}
+
+.compare {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.compare caption {
+  caption-side: bottom;
+  padding-top: 10px;
+  text-align: left;
+  font-size: 14px;
+  color: var(--text-3);
+}
+
+.compare th,
+.compare td {
+  padding: 11px 12px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.compare thead th {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+.compare tbody th {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.compare td {
+  color: var(--text-2);
+}
+
+.compare .is-ours > * {
+  background: color-mix(in srgb, var(--clay) 12%, transparent);
+}
+
+.guide-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 22px 0 8px;
+}
+
+/* .page a would otherwise recolour the buttons' text. */
+.page .btn-primary {
+  color: var(--on-clay);
+}
+
+.page .btn-ghost {
+  color: var(--text);
+}
+
+.page .faq summary {
+  font-size: 17px;
 }
 
 .lost {

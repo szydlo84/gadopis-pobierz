@@ -15,6 +15,7 @@
 ## Strony
 
 - [Strona główna](https://gadopis.pl/): opis programu, pobieranie i pytania
+- [Dyktowanie po polsku w Windows 10 i 11](https://gadopis.pl/dyktowanie-windows-10): co dyktuje po polsku (Win+H, Word, Dokumenty Google, Gadopis), z internetem i bez
 - [Polityka prywatności](https://gadopis.pl/prywatnosc): statystyki strony i dane
 
 ## Pobieranie

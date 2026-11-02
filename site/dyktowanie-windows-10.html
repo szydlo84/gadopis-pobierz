@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Dyktowanie po polsku w Windows 10 i 11: gdy Win+H nie działa</title>
+    <meta
+      name="description"
+      content="Windows 10 nie dyktuje po polsku, a Win+H w Windows 11 działa tylko z internetem. Co zrobić, gdy widzisz „Dyktowanie nie jest dostępne w bieżącym języku”."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Gadopis" />
+    <meta property="og:locale" content="pl_PL" />
+    <meta
+      property="og:title"
+      content="Dyktowanie po polsku w Windows 10 i 11: gdy Win+H nie działa"
+    />
+    <meta
+      property="og:description"
+      content="Windows 10 nie dyktuje po polsku, a Win+H w Windows 11 działa tylko z internetem. Porównanie i darmowe rozwiązanie offline."
+    />
+    <meta
+      property="og:url"
+      content="https://gadopis.pl/dyktowanie-windows-10"
+    />
+    <meta
+      property="og:image"
+      content="https://gadopis.pl/assets/img/gadopis-podglad-to-zapisze.png"
+    />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="640" />
+    <meta
+      property="og:image:alt"
+      content="Logo gadopis i hasło „Gadaj, gadopis to zapisze.”: lokalna zamiana mowy na tekst na Windows 10 i 11"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://gadopis.pl/dyktowanie-windows-10" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" />
+    <link
+      rel="preload"
+      href="/assets/fonts/Figtree-Variable.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/app.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "@id": "https://gadopis.pl/dyktowanie-windows-10#artykul",
+            "headline": "Dyktowanie po polsku w Windows 10 i 11",
+            "description": "Windows 10 nie dyktuje po polsku, a Win+H w Windows 11 działa tylko z internetem. Porównanie wbudowanego dyktowania, Worda, Dokumentów Google i Gadopisu.",
+            "inLanguage": "pl-PL",
+            "datePublished": "2026-11-02",
+            "dateModified": "2026-11-02",
+            "mainEntityOfPage": "https://gadopis.pl/dyktowanie-windows-10",
+            "image": "https://gadopis.pl/assets/img/gadopis-podglad-to-zapisze.png",
+            "author": {
+              "@type": "Person",
+              "@id": "https://gadopis.pl/#autor",
+              "name": "Piotr Szydłowski",
+              "sameAs": ["https://github.com/szydlo84"]
+            },
+            "publisher": { "@id": "https://gadopis.pl/#autor" },
+            "mentions": { "@id": "https://gadopis.pl/#program" }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Gadopis",
+                "item": "https://gadopis.pl/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Dyktowanie po polsku w Windows 10 i 11",
+                "item": "https://gadopis.pl/dyktowanie-windows-10"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <main class="page">
+      <p><a href="/">← Gadopis</a></p>
+      <h1 class="section-title">
+        Dyktowanie po polsku w&nbsp;Windows&nbsp;10 i&nbsp;11
+      </h1>
+      <p class="page-note">
+        Piotr Szydłowski, autor Gadopisu · aktualizacja 2 listopada 2026
+      </p>
+
+      <div class="answer">
+        <p>
+          <strong>W skrócie.</strong> Windows 10 nie dyktuje po polsku: jego
+          dyktowanie (Win+H) obsługuje kilka języków, a polskiego wśród nich nie
+          ma. W Windows 11 Win+H zna polski, ale działa tylko z internetem, bo
+          mowę rozpoznają usługi Microsoftu. Żeby dyktować po polsku w Windows
+          10 albo bez internetu, potrzebny jest osobny program, na przykład
+          darmowy Gadopis.
+        </p>
+      </div>
+
+      <h2>
+        Skąd komunikat „Dyktowanie nie jest dostępne w bieżącym języku: Polski”
+      </h2>
+      <p>
+        Windows pokazuje go po naciśnięciu Win+H, gdy w aktywnym języku nie ma
+        dyktowania.
+      </p>
+      <ul>
+        <li>
+          <strong>Windows 10.</strong> Dyktowanie obsługuje tylko angielski,
+          chiński uproszczony, francuski, niemiecki, włoski, portugalski
+          (Brazylia) i hiszpański (<a
+            href="https://support.microsoft.com/pl-pl/Accessibility/windows/use-voice-typing-to-talk-instead-of-type-on-your-pc"
+            >lista Microsoftu</a
+          >). Polskiego nie da się dodać, więc komunikat wraca za każdym razem.
+        </li>
+        <li>
+          <strong>Windows 11.</strong> Polski jest na liście języków dyktowania.
+          Jeśli mimo to widzisz komunikat, zajrzyj do sekcji o Windows 11 niżej.
+        </li>
+      </ul>
+
+      <h2>Co dyktuje po polsku: porównanie</h2>
+      <div class="table-wrap">
+        <table class="compare">
+          <caption>
+            Stan na 2 listopada 2026, według stron pomocy Microsoftu i Google.
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Narzędzie</th>
+              <th scope="col">Po polsku</th>
+              <th scope="col">Bez internetu</th>
+              <th scope="col">Gdzie działa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Dyktowanie w Windows 10 (Win+H)</th>
+              <td>Nie</td>
+              <td>Nie</td>
+              <td>W każdym programie</td>
+            </tr>
+            <tr>
+              <th scope="row">Dyktowanie w Windows 11 (Win+H)</th>
+              <td>Tak</td>
+              <td>Nie</td>
+              <td>W każdym programie</td>
+            </tr>
+            <tr>
+              <th scope="row">Dyktuj w Wordzie</th>
+              <td>Tak, w wersji zapoznawczej</td>
+              <td>Nie</td>
+              <td>Tylko w Wordzie, z subskrypcją Microsoft 365</td>
+            </tr>
+            <tr>
+              <th scope="row">Pisanie głosowe w Dokumentach Google</th>
+              <td>Tak, ale polecenia tylko po angielsku</td>
+              <td>Nie</td>
+              <td>Tylko w Dokumentach Google, w przeglądarce</td>
+            </tr>
+            <tr class="is-ours">
+              <th scope="row">Gadopis</th>
+              <td>Tak</td>
+              <td>Tak, po pobraniu modelu</td>
+              <td>W każdym programie, za darmo</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="page-note">
+        Źródła:
+        <a
+          href="https://support.microsoft.com/pl-pl/Accessibility/windows/use-voice-typing-to-talk-instead-of-type-on-your-pc"
+          >dyktowanie w Windows</a
+        >,
+        <a
+          href="https://support.microsoft.com/en-us/office/dictate-your-documents-in-word-3876e05f-3fcc-418f-b8ab-db7ce0d11d3c"
+          >Dyktuj w Wordzie</a
+        >,
+        <a href="https://support.google.com/docs/answer/4492226?hl=pl"
+          >pisanie głosowe w Dokumentach Google</a
+        >. Dostęp głosowy w Windows 11 też nie obsługuje polskiego (<a
+          href="https://support.microsoft.com/en-us/topic/voice-access-command-list-dac0f091-87ce-454d-8d57-bef38d3d8563"
+          >lista Microsoftu</a
+        >). Gadopis to program autora tej strony.
+      </p>
+
+      <h2>Jak dyktować po polsku w Windows 10</h2>
+      <p>
+        Wbudowane dyktowanie tego nie zrobi, ale wystarczy darmowy program.
+        Gadopis rozpoznaje mowę na komputerze, więc działa też bez internetu i w
+        Windows 11.
+      </p>
+      <ol>
+        <li>
+          Pobierz instalator i wybierz zwykłą instalację. Nie potrzebujesz
+          uprawnień administratora.
+        </li>
+        <li>
+          Kreator pierwszego uruchomienia dobierze model mowy do Twojego
+          komputera i sam go pobierze. Potem internet nie jest już potrzebny.
+        </li>
+        <li>
+          Kliknij w pole tekstowe, naciśnij F8 (na laptopie często Fn+F8),
+          powiedz zdanie i naciśnij F8 jeszcze raz. Tekst pojawi się tam, gdzie
+          jest kursor: w Wordzie, przeglądarce, ChatGPT czy Messengerze.
+        </li>
+      </ol>
+      <div class="guide-cta">
+        <a
+          class="btn btn-primary"
+          data-asset="Gadopis-Setup.exe"
+          href="https://github.com/szydlo84/gadopis-pobierz/releases/latest/download/Gadopis-Setup.exe"
+        >
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" />
+          </svg>
+          Pobierz Gadopis za darmo
+          <span class="btn-note" data-size="Gadopis-Setup.exe">16 MB</span>
+        </a>
+        <a class="btn btn-ghost" href="/">Więcej o Gadopisie</a>
+      </div>
+
+      <h2>Jak włączyć dyktowanie po polsku w Windows 11</h2>
+      <ol>
+        <li>
+          Otwórz Ustawienia → Czas i język → Język i region. Jeśli na liście
+          „Preferowane języki” nie ma polskiego, dodaj go.
+        </li>
+        <li>
+          Wybierz polski jako język wprowadzania: naciśnij Windows+Spacja albo
+          kliknij przełącznik języka na pasku zadań.
+        </li>
+        <li>
+          Połącz się z internetem, kliknij w pole tekstowe i naciśnij Windows+H.
+          Mów, gdy okienko dyktowania zacznie słuchać.
+        </li>
+      </ol>
+      <p>
+        Dyktowanie w Windows 11 korzysta z rozpoznawania mowy online w usługach
+        Azure Speech, więc to, co mówisz, trafia do Microsoftu. Jeśli mimo
+        dodanego polskiego widzisz komunikat o niedostępnym języku, odpowiedzi
+        na
+        <a
+          href="https://answers.microsoft.com/pl-pl/windows/forum/all/dyktowanie-nie-jest-dost%C4%99pne-w/e02002a2-4ce9-459d-aa71-51cbcb6cd070"
+          >forum Microsoftu</a
+        >
+        radzą usunąć polski z listy języków, uruchomić komputer ponownie i dodać
+        go jeszcze raz.
+      </p>
+
+      <h2>Pytania</h2>
+      <div class="faq">
+        <details>
+          <summary>Czy Windows 10 ma dyktowanie po polsku?</summary>
+          <p>
+            Nie. Dyktowanie w Windows 10 (Win+H) obsługuje kilka języków, ale
+            nie polski, i nie da się go dodać. Po polsku dyktujesz osobnym
+            programem, na przykład Gadopisem.
+          </p>
+        </details>
+        <details>
+          <summary>Czy dyktowanie w Windows 11 działa bez internetu?</summary>
+          <p>
+            Nie. Win+H wymaga połączenia z internetem, bo mowę rozpoznają usługi
+            Microsoftu. Bez internetu dyktujesz programem, który rozpoznaje mowę
+            na komputerze, jak Gadopis.
+          </p>
+        </details>
+        <details>
+          <summary>W jakich programach działa Gadopis?</summary>
+          <p>
+            Wszędzie, gdzie można wpisać tekst: Word, przeglądarka, ChatGPT,
+            Discord, Messenger, Teams. Wyjątek to okna uruchomione jako
+            administrator, ale tekst i tak znajdziesz w historii programu.
+          </p>
+        </details>
+        <details>
+          <summary>Ile kosztuje Gadopis?</summary>
+          <p>
+            Nic. Wersja beta jest darmowa, bez konta i bez reklam. Działa na
+            Windows 10 i 11 w wersji 64-bitowej.
+          </p>
+        </details>
+      </div>
+
+      <p class="page-note">
+        Coś się zmieniło albo działa u Ciebie inaczej?
+        <a href="https://github.com/szydlo84/gadopis-pobierz/issues">Daj znać</a
+        >, a poprawię ten tekst.
+      </p>
+    </main>
+
+    <footer class="foot">
+      <p class="foot-small">
+        <a href="/">Gadopis</a> · <a href="/prywatnosc">Polityka prywatności</a
+        ><span data-consent-settings hidden>
+          ·
+          <button class="foot-link" type="button" data-consent-open>
+            Ustawienia statystyk
+          </button></span
+        >
+      </p>
+    </footer>
+
+    <section class="consent" data-consent aria-labelledby="zgoda-tytul" hidden>
+      <h2 id="zgoda-tytul" class="consent-title">Statystyki odwiedzin</h2>
+      <p class="consent-text">
+        Za Twoją zgodą strona liczy odwiedziny w Google Analytics, żeby było
+        wiadomo, ile osób tu trafia i skąd. Zapisuje do tego ciasteczka. Sam
+        program Gadopis nie wysyła nagrań ani tekstów.
+      </p>
+      <div class="consent-actions">
+        <button
+          class="btn btn-outline"
+          type="button"
+          data-consent-choice="granted"
+        >
+          Zgadzam się
+        </button>
+        <button
+          class="btn btn-outline"
+          type="button"
+          data-consent-choice="denied"
+        >
+          Nie zgadzam się
+        </button>
+      </div>
+    </section>
+  </body>
+</html>
