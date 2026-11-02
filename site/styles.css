@@ -36,7 +36,9 @@
   --clay-hover: #b2622d;
   --clay-press: #8c491a;
   --clay-text: #8c491a;
-  --on-clay: #201e1d;
+  /* White on clay: APCA rates it Lc 66, dark text only 38. WCAG 2's ratio
+     says the reverse, but it misjudges mid-tone oranges like this one. */
+  --on-clay: #fff;
   --sage: #7a8a5e;
   --logo-bars: #f5ead8;
   --blob-peach: #fddfd0;
@@ -61,7 +63,8 @@
     --text-3: #9b917f;
     --onplan: #7d93ff;
     --clay: #d67f48;
-    --clay-hover: #f6a06b;
+    /* Hover darkens, as in light mode, so the white text keeps its contrast. */
+    --clay-hover: #c67139;
     --clay-press: #b2622d;
     --clay-text: #f6a06b;
     --sage: #aebf92;
@@ -1013,8 +1016,7 @@ main > section:not(.hero) {
   padding: 4px 11px;
   border-radius: 999px;
   background: var(--clay);
-  /* White, not the dark on-clay: it reads clearly better on clay. */
-  color: #fff;
+  color: var(--on-clay);
   font-weight: 800;
   letter-spacing: 0.06em;
   text-transform: uppercase;
