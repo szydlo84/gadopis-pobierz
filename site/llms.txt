@@ -16,6 +16,7 @@
 
 - [Strona główna](https://gadopis.pl/): opis programu, pobieranie i pytania
 - [Dyktowanie po polsku w Windows 10 i 11](https://gadopis.pl/dyktowanie-windows-10): co dyktuje po polsku (Win+H, Word, Dokumenty Google, Gadopis), z internetem i bez
+- [Dyktowanie w Wordzie po polsku](https://gadopis.pl/dyktowanie-w-wordzie): przycisk Dyktuj (Microsoft 365, internet), Word 2016 i 2019 bez subskrypcji, Win+H w Windows 11 i Gadopis
 - [Transkrypcja nagrań na tekst](https://gadopis.pl/transkrypcja-nagran): jak zamienić nagranie lub film na tekst i napisy .srt bez internetu, porównanie z Wordem i serwisami online, szybkość i dokładność modeli
 - [Polityka prywatności](https://gadopis.pl/prywatnosc): statystyki strony i dane
 
