@@ -1405,6 +1405,13 @@ main > section.author {
   font-size: 21px;
 }
 
+/* One entry in a longer section, such as one program in a comparison. */
+.page h3 {
+  margin: 24px 0 6px;
+  font-size: 18px;
+  font-weight: 800;
+}
+
 .page p,
 .page li {
   font-size: 17px;

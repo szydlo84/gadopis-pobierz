@@ -19,6 +19,7 @@
 - [Dyktowanie w Wordzie po polsku](https://gadopis.pl/dyktowanie-w-wordzie): przycisk Dyktuj (Microsoft 365, internet), Word 2016 i 2019 bez subskrypcji, Win+H w Windows 11 i Gadopis
 - [Transkrypcja nagrań na tekst](https://gadopis.pl/transkrypcja-nagran): jak zamienić nagranie lub film na tekst i napisy .srt bez internetu, porównanie z Wordem i serwisami online, szybkość i dokładność modeli
 - [Automatyczne napisy do filmu po polsku](https://gadopis.pl/napisy-do-filmu): napisy .srt z filmu na komputerze, porównanie z YouTube, TurboScribe i Subtitle Edit, zasady dzielenia napisów i krzaczki zamiast polskich liter na telewizorze
+- [Programy do dyktowania po polsku](https://gadopis.pl/programy-do-dyktowania): porównanie Win+H, Dyktuj w Wordzie, Dokumentów Google, Wispr Flow, Superwhisper, Mowio i Gadopisu (ceny, limity, praca bez internetu) oraz odpowiedź, czy Dragon zna polski
 - [Polityka prywatności](https://gadopis.pl/prywatnosc): statystyki strony i dane
 
 ## Pobieranie
