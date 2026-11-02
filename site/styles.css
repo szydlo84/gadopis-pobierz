@@ -1508,6 +1508,21 @@ main > section.author {
   font-size: 17px;
 }
 
+/* A file shown as it is, such as one subtitle. Scrolls inside its box. */
+.page pre {
+  overflow-x: auto;
+  margin: 14px 0;
+  padding: 14px 18px;
+  border: 1.5px solid var(--line);
+  border-radius: 16px;
+  background: var(--surface);
+  font:
+    15px/1.5 ui-monospace,
+    Consolas,
+    monospace;
+  color: var(--text);
+}
+
 .lost {
   display: grid;
   justify-items: center;
