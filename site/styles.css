@@ -870,6 +870,14 @@ main > section:not(.hero) {
   box-shadow: var(--shadow);
 }
 
+.page .showcase-shot {
+  margin: 28px 0 0;
+}
+
+.page .showcase-shot figcaption {
+  margin-top: 10px;
+}
+
 /* A loop recorded from the app: dark in both themes, like the recording pill.
    app.js plays it only while it is on screen. The ring shows its edge on the
    dark page, where the video and the background are nearly the same color. */
