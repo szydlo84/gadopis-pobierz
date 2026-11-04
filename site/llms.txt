@@ -15,6 +15,8 @@
 ## Strony
 
 - [Strona główna](https://gadopis.pl/): opis programu, pobieranie i pytania
+- [Zamiana mowy na tekst po polsku](https://gadopis.pl/zamiana-mowy-na-tekst): darmowe sposoby na komputerze, w telefonie i dla gotowych nagrań, z tabelą: co działa bez internetu i ile kosztuje
+- [Pisanie głosowe na komputerze](https://gadopis.pl/pisanie-glosowe-na-komputerze): jak włączyć w Windows 11, Wordzie i Dokumentach Google, skróty, polecenia po polsku i co zrobić, gdy nie działa
 - [Dyktowanie po polsku w Windows 10 i 11](https://gadopis.pl/dyktowanie-windows-10): co dyktuje po polsku (Win+H, Word, Dokumenty Google, Gadopis), z internetem i bez
 - [Dyktowanie w Wordzie po polsku](https://gadopis.pl/dyktowanie-w-wordzie): przycisk Dyktuj (Microsoft 365, internet), Word 2016 i 2019 bez subskrypcji, Win+H w Windows 11 i Gadopis
 - [Transkrypcja nagrań na tekst](https://gadopis.pl/transkrypcja-nagran): jak zamienić nagranie lub film na tekst i napisy .srt bez internetu, porównanie z Wordem i serwisami online, szybkość i dokładność modeli

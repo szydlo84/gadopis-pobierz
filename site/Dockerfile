@@ -3,7 +3,7 @@
 FROM nginx:stable-alpine
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY index.html prywatnosc.html dyktowanie-windows-10.html transkrypcja-nagran.html dyktowanie-w-wordzie.html napisy-do-filmu.html programy-do-dyktowania.html 404.html styles.css app.js robots.txt sitemap.xml llms.txt favicon.ico /usr/share/nginx/html/
+COPY index.html prywatnosc.html dyktowanie-windows-10.html transkrypcja-nagran.html dyktowanie-w-wordzie.html napisy-do-filmu.html programy-do-dyktowania.html zamiana-mowy-na-tekst.html pisanie-glosowe-na-komputerze.html 404.html styles.css app.js robots.txt sitemap.xml llms.txt favicon.ico /usr/share/nginx/html/
 COPY assets /usr/share/nginx/html/assets
 
 EXPOSE 80
