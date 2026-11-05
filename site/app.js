@@ -8,8 +8,9 @@ const CACHE_MS = 10 * 60 * 1000;
 // Below this many downloads the page invites early testers instead of a number.
 const MIN_COUNT = 1;
 // Downloads of older releases, which are hidden as drafts and so no longer in
-// the public API: 0.1.0 (6), 0.1.2 (3) and 0.1.3 (5), frozen when hidden.
-const HIDDEN_DOWNLOADS = 14;
+// the public API: 0.1.0 (6), 0.1.2 (3), 0.1.3 (5) and 0.1.4 (17), frozen when
+// hidden.
+const HIDDEN_DOWNLOADS = 31;
 
 const reducedMotion = window.matchMedia(
   "(prefers-reduced-motion: reduce)",
