@@ -7,7 +7,7 @@
 - Cena: 0 zł. Darmowa wersja beta, bez reklam i bez konta.
 - System: Windows 10 i 11, 64-bit. Windows 10 nie ma wbudowanego dyktowania po polsku, a dyktowanie w Windows 11 (Win+H) działa tylko przez internet.
 - Dyktowanie: po naciśnięciu F8 (na laptopach często Fn+F8) mówisz, a tekst pojawia się tam, gdzie jest kursor: w Wordzie, przeglądarce, ChatGPT, Discordzie i innych programach.
-- Pliki: zamienia na tekst nagrania i filmy (MP3, M4A, WAV, FLAC, MP4, MOV) i zapisuje napisy .srt w UTF-8 z polskimi znakami.
+- Pliki: zamienia na tekst nagrania i filmy (MP3, M4A, WAV, FLAC, MP4, MOV), a wynik zapisuje jako tekst .txt albo napisy .srt w UTF-8 z polskimi znakami.
 - Prywatność: nagrania nie opuszczają komputera i nie ma telemetrii. Internet jest potrzebny do pobrania modelu i aktualizacji. Program raz dziennie sprawdza na GitHubie, czy jest nowa wersja (można to wyłączyć).
 - Pochodzenie: oparty na otwartym projekcie Handy (licencja MIT) i silniku transcribe.cpp. Autor: Piotr Szydłowski.
 - Bezpieczeństwo: instalator nie jest jeszcze podpisany certyfikatem, więc Windows SmartScreen może pokazać ostrzeżenie. Sumy SHA256 plików są w SHA256SUMS.txt.
